@@ -21,7 +21,7 @@ export default function Messanger() {
 
   useEffect(() => {
 
-    socket.current = io("ws://localhost:8900");
+    socket.current = io("https://apisocket.herokuapp.com");
     console.log(socket);
     socket.current.on("getMessage",(data)=>{
       setArrivalMessage({
