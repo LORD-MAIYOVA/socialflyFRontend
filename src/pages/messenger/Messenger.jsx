@@ -21,7 +21,7 @@ export default function Messanger() {
 
   useEffect(() => {
 
-    socket.current = io("https://apisocket.herokuapp.com");
+    socket.current = io('https://apisocket.herokuapp.com' , { transports: ['websocket', 'polling', 'flashsocket'] });
     console.log(socket);
     socket.current.on("getMessage",(data)=>{
       setArrivalMessage({
